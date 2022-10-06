@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frogger</title>
+    <link rel="stylesheet" href="./sytle.css">
+</head>
+<body>
+    <h1>Frogger</h1>
+    <h3>Use arrow keys to help the frog get to the other side</h3>
+    <div class="main-container">
+        <div class="game-container">
+            <div class="dest row">
+                <div class="dest-inacsbl tile" id="di-0"></div> 
+                <div class="dest-acsbl tile" id="da-0"></div>
+                <div class="dest-inacsbl tile" id="di-1"></div>
+                <div class="dest-acsbl tile" id="da-1"></div>
+                <div class="dest-inacsbl tile" id="di-2"></div>
+                <div class="dest-acsbl tile" id="da-2"></div>
+                <div class="dest-inacsbl tile" id="di-3"></div>
+                <div class="dest-acsbl tile" id="da-3"></div>
+                <div class="dest-inacsbl tile" id="di-4"></div>
+                <div class="dest-acsbl tile" id="da-4"></div>
+                <div class="dest-inacsbl tile" id="di-5"></div>
+                <div class="dest-acsbl tile" id="da-5"></div>
+            </div>
+            <div class="park-left row">
+                <div class="park tile" id="pl-0"></div>
+                <div class="park tile" id="pl-1"></div>
+                <div class="park tile" id="pl-2"></div>
+                <div class="park tile" id="pl-3"></div>
+                <div class="park tile" id="pl-4"></div>
+                <div class="park tile" id="pl-5"></div>
+                <div class="park tile" id="pl-6"></div>
+                <div class="park tile" id="pl-7"></div>
+                <div class="park tile" id="pl-8"></div>
+                <div class="park tile" id="pl-9"></div>
+                <div class="park tile" id="pl-10"></div>
+                <div class="park tile" id="pl-11"></div>
+            </div>
+            <div class="park-right row">
+                <div class="park tile" id="pr-0"></div>
+                <div class="park tile" id="pr-1"></div>
+                <div class="park tile" id="pr-2"></div>
+                <div class="park tile" id="pr-3"></div>
+                <div class="park tile" id="pr-4"></div>
+                <div class="park tile" id="pr-5"></div>
+                <div class="park tile" id="pr-6"></div>
+                <div class="park tile" id="pr-7"></div>
+                <div class="park tile" id="pr-8"></div>
+                <div class="park tile" id="pr-9"></div>
+                <div class="park tile" id="pr-10"></div>
+                <div class="park tile" id="pr-11"></div>
+            </div>
+            <div class="resting row">
+                <div class="rest tile" id="rp-0"></div>
+                <div class="rest tile" id="rp-1"></div>
+                <div class="rest tile" id="rp-2"></div>
+                <div class="rest tile" id="rp-3"></div>
+                <div class="rest tile" id="rp-4"></div>
+                <div class="rest tile" id="rp-5"></div>
+                <div class="rest tile" id="rp-6"></div>
+                <div class="rest tile" id="rp-7"></div>
+                <div class="rest tile" id="rp-8"></div>
+                <div class="rest tile" id="rp-9"></div>
+                <div class="rest tile" id="rp-10"></div>
+                <div class="rest tile" id="rp-11"></div>
+            </div>
+            <div class="water-left row">
+                <div class="water tile" id="wl-0"></div>
+                <div class="water tile" id="wl-1"></div>
+                <div class="water tile" id="wl-2"></div>
+                <div class="water tile" id="wl-3"></div>
+                <div class="water tile" id="wl-4"></div>
+                <div class="water tile" id="wl-5"></div>
+                <div class="water tile" id="wl-6"></div>
+                <div class="water tile" id="wl-7"></div>
+                <div class="water tile" id="wl-8"></div>
+                <div class="water tile" id="wl-9"></div>
+                <div class="water tile" id="wl-10"></div>
+                <div class="water tile" id="wl-11"></div>
+            </div>
+            <div class="water-right row">
+                <div class="water tile" id="wr-0"></div>
+                <div class="water tile" id="wr-1"></div>
+                <div class="water tile" id="wr-2"></div>
+                <div class="water tile" id="wr-3"></div>
+                <div class="water tile" id="wr-4"></div>
+                <div class="water tile" id="wr-5"></div>
+                <div class="water tile" id="wr-6"></div>
+                <div class="water tile" id="wr-7"></div>
+                <div class="water tile" id="wr-8"></div>
+                <div class="water tile" id="wr-9"></div>
+                <div class="water tile" id="wr-10"></div>
+                <div class="water tile" id="wr-11"></div>
+            </div>
+            <div class="water-left row">
+                <div class="water tile" id="wl-12"></div>
+                <div class="water tile" id="wl-13"></div>
+                <div class="water tile" id="wl-14"></div>
+                <div class="water tile" id="wl-15"></div>
+                <div class="water tile" id="wl-16"></div>
+                <div class="water tile" id="wl-17"></div>
+                <div class="water tile" id="wl-18"></div>
+                <div class="water tile" id="wl-19"></div>
+                <div class="water tile" id="wl-20"></div>
+                <div class="water tile" id="wl-21"></div>
+                <div class="water tile" id="wl-22"></div>
+                <div class="water tile" id="wl-23"></div>
+            </div>
+            <div class="water-right row">
+                <div class="water tile" id="wr-12"></div>
+                <div class="water tile" id="wr-13"></div>
+                <div class="water tile" id="wr-14"></div>
+                <div class="water tile" id="wr-15"></div>
+                <div class="water tile" id="wr-16"></div>
+                <div class="water tile" id="wr-17"></div>
+                <div class="water tile" id="wr-18"></div>
+                <div class="water tile" id="wr-19"></div>
+                <div class="water tile" id="wr-20"></div>
+                <div class="water tile" id="wr-21"></div>
+                <div class="water tile" id="wr-22"></div>
+                <div class="water tile" id="wr-23"></div>
+            </div>
+            <div class="resting row">
+                <div class="rest tile" id="rp-12"></div>
+                <div class="rest tile" id="rp-13"></div>
+                <div class="rest tile" id="rp-14"></div>
+                <div class="rest tile" id="rp-15"></div>
+                <div class="rest tile" id="rp-16"></div>
+                <div class="rest tile" id="rp-17"></div>
+                <div class="rest tile" id="rp-18"></div>
+                <div class="rest tile" id="rp-19"></div>
+                <div class="rest tile" id="rp-20"></div>
+                <div class="rest tile" id="rp-21"></div>
+                <div class="rest tile" id="rp-22"></div>
+                <div class="rest tile" id="rp-23"></div>
+            </div>
+            <div class="dirt-left row">
+                <div class="dirt tile" id="dl-0"></div>
+                <div class="dirt tile" id="dl-1"></div>
+                <div class="dirt tile" id="dl-2"></div>
+                <div class="dirt tile" id="dl-3"></div>
+                <div class="dirt tile" id="dl-4"></div>
+                <div class="dirt tile" id="dl-5"></div>
+                <div class="dirt tile" id="dl-6"></div>
+                <div class="dirt tile" id="dl-7"></div>
+                <div class="dirt tile" id="dl-8"></div>
+                <div class="dirt tile" id="dl-9"></div>
+                <div class="bl-l tile" id="dl-10"></div>
+                <div class="dirt tile" id="dl-11"></div>
+            </div>
+            <div class="road-left row">
+                <div class="road tile" id="rl-0"></div>
+                <div class="road tile" id="rl-1"></div>
+                <div class="road tile" id="rl-2"></div>
+                <div class="road tile" id="rl-3"></div>
+                <div class="road tile" id="rl-4"></div>
+                <div class="road tile" id="rl-5"></div>
+                <div class="road tile" id="rl-6"></div>
+                <div class="road tile" id="rl-7"></div>
+                <div class="road tile" id="rl-8"></div>
+                <div class="road tile" id="rl-9"></div>
+                <div class="road tile" id="rl-10"></div>
+                <div class="road tile" id="rl-11"></div>
+            </div>
+            <div class="road-left row">
+                <div class="road tile" id="rl-12"></div>
+                <div class="road tile" id="rl-13"></div>
+                <div class="road tile" id="rl-14"></div>
+                <div class="road tile" id="rl-15"></div>
+                <div class="road tile" id="rl-16"></div>
+                <div class="road tile" id="rl-17"></div>
+                <div class="road tile" id="rl-18"></div>
+                <div class="road tile" id="rl-19"></div>
+                <div class="road tile" id="rl-20"></div>
+                <div class="road tile" id="rl-21"></div>
+                <div class="road tile" id="rl-22"></div>
+                <div class="road tile" id="rl-23"></div>
+            </div>
+            <div class="road-right row">
+                <div class="road tile" id="rr-0"></div>
+                <div class="road tile" id="rr-1"></div>
+                <div class="road tile" id="rr-2"></div>
+                <div class="road tile" id="rr-3"></div>
+                <div class="road tile" id="rr-4"></div>
+                <div class="road tile" id="rr-5"></div>
+                <div class="road tile" id="rr-6"></div>
+                <div class="road tile" id="rr-7"></div>
+                <div class="road tile" id="rr-8"></div>
+                <div class="road tile" id="rr-9"></div>
+                <div class="road tile" id="rr-10"></div>
+                <div class="road tile" id="rr-11"></div>
+            </div>
+            <div class="road-right row">
+                <div class="road tile" id="rr-12"></div>
+                <div class="road tile" id="rr-13"></div>
+                <div class="road tile" id="rr-14"></div>
+                <div class="road tile" id="rr-15"></div>
+                <div class="road tile" id="rr-16"></div>
+                <div class="road tile" id="rr-17"></div>
+                <div class="road tile" id="rr-18"></div>
+                <div class="road tile" id="rr-19"></div>
+                <div class="road tile" id="rr-20"></div>
+                <div class="road tile" id="rr-21"></div>
+                <div class="road tile" id="rr-22"></div>
+                <div class="road tile" id="rr-23"></div>
+            </div>
+            <div class="dirt-right row">
+                <div class="dirt tile" id="dr-0"></div>
+                <div class="bl-r tile" id="dr-1"></div>
+                <div class="dirt tile" id="dr-2"></div>
+                <div class="dirt tile" id="dr-3"></div>
+                <div class="dirt tile" id="dr-4"></div>
+                <div class="dirt tile" id="dr-5"></div>
+                <div class="dirt tile" id="dr-6"></div>
+                <div class="dirt tile" id="dr-7"></div>
+                <div class="dirt tile" id="dr-8"></div>
+                <div class="dirt tile" id="dr-9"></div>
+                <div class="dirt tile" id="dr-10"></div>
+                <div class="dirt tile" id="dr-11"></div>
+            </div>
+            <div class="resting row">
+                <div class="rest tile" id="rp-24"></div>
+                <div class="rest tile" id="rp-25"></div>
+                <div class="rest tile" id="rp-26"></div>
+                <div class="rest tile" id="rp-27"></div>
+                <div class="rest tile" id="rp-28"></div>
+                <div class="rest tile" id="rp-29"></div>
+                <div class="rest tile" id="rp-30"></div>
+                <div class="rest tile" id="rp-31"></div>
+                <div class="rest tile" id="rp-32"></div>
+                <div class="rest tile" id="rp-33"></div>
+                <div class="rest tile" id="rp-34"></div>
+                <div class="rest tile" id="rp-35"></div>
+            </div>
+        </div>
+        <div class="score-container">
+            <div class="score-div">
+                <div class="score-panel-title" id="score-panel-title">Score</div>
+                <div class="score-panel-number" id="score-panel-number">0</div>
+            </div>
+            <div class="score-div">
+                <div class="score-panel-title" id="lives-panel-title">Lives</div>
+                <div class="score-panel-number" id="lives-panel-number">3</div>
+            </div>
+            <div class="timer-div">
+                <div class="score-panel-title" id="timer-panel-title">Time Left</div>
+                <div class="timer-panel-number" id="timer-panel-number">30</div>
+            </div>
+            <div class="score-div">
+                <div class="score-panel-title" id="record-panel-title">Record</div>
+                <div class="score-panel-number" id="record-panel-number">0</div>
+            </div>
+            <div class="buttons-div">
+                <div class="start-button">
+                    <div class="button-icon">
+                        <i class="fa-sharp fa-solid fa-play fa-3x" id="start-btn"></i>
+                    </div>
+                    <div class="button-title">Start Game</div>
+                </div>
+                <div class="reload-button">
+                    <div class="button-icon">
+                        <i class="fa-sharp fa-solid fa-rotate-right fa-3x" id="reload-btn"></i>
+                    </div>
+                    <div class="button-title">Reload Page</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./app.js"></script>
+    <script src="https://kit.fontawesome.com/9a6422c61d.js" crossorigin="anonymous"></script>
+</body>
+</html>

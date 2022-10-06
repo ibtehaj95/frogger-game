@@ -1,0 +1,223 @@
+body{
+    box-sizing: border-box;
+    background-color: rgb(228, 240, 102);
+}
+
+h1{
+    text-align: center;
+    color: green;
+}
+h3{
+    text-align: center;
+    color: rgb(123, 182, 33);
+}
+
+.main-container{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.game-container{
+width: 82%;
+border: 1px solid white;
+display: flex;
+flex-direction: column;
+}
+
+.row{
+    height: 6.25%;
+    width: 100%;
+    display: flex;
+}
+
+.tile{
+    height: 100%;
+    width: 8.33%;
+}
+
+.dest-inacsbl{
+    background-color: #e9e4d4;
+}
+
+.dest-acsbl{
+    background-color: #486f38;
+}
+
+.dest-done{
+    background-color: purple;
+    background-image: url(./assets/crowned_frog.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.dirt{
+    background-color: #dda391;
+}
+
+.bl-l{
+    background-color: #dda391;
+    background-image: url(./assets/bike_lane-l.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.bl-r{
+    background-color: #dda391;
+    background-image: url(./assets/bike_lane-r.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.rest{
+    background-color: rgb(123, 182, 33);
+}
+
+.water{
+    background-color: #09c3db;
+}
+
+.road{
+    background-color: #808080;
+    background-image: url(./assets/road.png);
+    background-size: cover;
+    background-position: center;
+    /* position: relative;
+    z-index: 0; */
+}
+
+.park{
+    background-color: #aadb1e;
+}
+
+.cyc-r{
+    /* background-color: whitesmoke; */
+    background-color: #dda391;
+    background-image: url(./assets/cyclist-r.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.cyc-l{
+    /* background-color: whitesmoke; */
+    background-color: #dda391;
+    background-image: url(./assets/cyclist-l.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.pred-l{
+    background-color: #aadb1e;
+    background-image: url(./assets/snake-l.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.pred-r{
+    background-color: #aadb1e;
+    background-image: url(./assets/snake-r.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.car-l1{
+    background-color: #808080;
+    background-image: url(./assets/car-sedan.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.car-l2{
+    background-color: #808080;
+    background-image: url(./assets/car-hb2.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.car-r1{
+    background-color: #808080;
+    background-image: url(./assets/car_vwb.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.car-r2{
+    background-color: #808080;
+    background-image: url(./assets/car-trk.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.wood{
+    background-color: #8d6c53;
+    background-image: url(./assets/wood.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.user{
+    /* background-color: gold; */
+    background-image: url(./assets/frog.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.score-container{
+    width: 16%;
+    border: 1px solid white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.score-div{
+    padding: 4%;
+}
+
+.timer-div{
+    padding: 4%;
+}
+
+.score-panel-title{
+    font-size: 200%;
+    color: green;
+}
+
+.score-panel-number{
+    font-size: 320%;
+    color: rgb(123, 182, 33);
+}
+
+.timer-panel-number{
+    color: rgb(123, 182, 33);
+    font-size: 320%;
+}
+
+.buttons-div{
+    display: flex;
+    justify-content: space-evenly;
+    color: green;
+    padding: 4%;
+}
+
+.buttons-div i{
+    color: rgb(123, 182, 33);
+}
+
+.button-title{
+    font-size: 110%;
+    font-weight: 600;
+}
